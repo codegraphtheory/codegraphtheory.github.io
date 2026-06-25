@@ -1,1 +1,1 @@
-{"name":"GraphTheory","short_name":"GraphTheory","icons":[{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#04070a","background_color":"#04070a","display":"standalone"}
+{"name":"GraphTheory","short_name":"GraphTheory","description":"Open-source AI advocate building on Hermes.","start_url":"/","scope":"/","display":"standalone","theme_color":"#04070a","background_color":"#04070a","icons":[{"src":"/assets/icon-512.png","sizes":"512x512","type":"image/png"},{"src":"/assets/apple-touch-icon.png","sizes":"180x180","type":"image/png"}]}
