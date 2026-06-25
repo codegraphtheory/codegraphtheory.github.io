@@ -446,8 +446,25 @@
 
     .x-card:hover { transform: translateY(-2px); border-color: rgba(9,239,226,.68); background: var(--panel-2); }
     .x-label { display: flex; justify-content: space-between; gap: 12px; color: var(--hot-2); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: lowercase; margin-bottom: 12px; }
-    .tweet-shell { display: grid; place-items: center; min-width: 0; }
+    .tweet-shell {
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      max-width: 552px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #04070a;
+      border: 1px solid rgba(9,239,226,.18);
+      box-shadow: inset 0 0 0 1px rgba(4,7,10,.96), 0 0 36px rgba(9,239,226,.10);
+    }
     .tweet-shell .twitter-tweet { margin: 0 auto !important; }
+    .tweet-shell iframe {
+      display: block !important;
+      border: 0 !important;
+      background: #04070a !important;
+      transform: scale(1.012);
+      transform-origin: center;
+    }
 
     .x-quote {
       border: 1px solid rgba(160,166,207,.22);
