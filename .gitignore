@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+.env
+*.log
+assets/desktop-smoke.png
+assets/mobile-smoke.png
+assets/desktop-tightened.png
+assets/mobile-tightened.png
+assets/responsive/*.png
