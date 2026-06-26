@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://graphtheory.xyz/sitemap.xml
+Sitemap: https://graphtheory.xyz/sitemap-pages.xml

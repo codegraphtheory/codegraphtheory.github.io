@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://graphtheory.xyz/</loc></url>
-  <url><loc>https://graphtheory.xyz/hermes-profile-template/</loc></url>
-  <url><loc>https://graphtheory.xyz/heavy-coder/</loc></url>
-  <url><loc>https://graphtheory.xyz/context-forge-rag/</loc></url>
-  <url><loc>https://graphtheory.xyz/chainforge/</loc></url>
-  <url><loc>https://graphtheory.xyz/solana-rug/</loc></url>
-  <url><loc>https://graphtheory.xyz/codegraphtheory/</loc></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/root.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/hermes-profile-template.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/heavy-coder.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/context-forge-rag.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/chainforge.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/solana-rug.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemaps/codegraphtheory.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://graphtheory.xyz/sitemap-pages.xml</loc>
+    <lastmod>2026-06-26</lastmod>
+  </sitemap>
+</sitemapindex>
