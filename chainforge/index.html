@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>chainforge | GraphTheory docs</title>
-  <meta name="description" content="Security-first blockchain architect profile for smart contracts, DeFi, audits, and tokenomics." />
+  <title>ChainForge developer docs | GraphTheory</title>
+  <meta name="description" content="Security-first blockchain architect profile for smart contracts, protocol design, tokenomics, audit readiness, Solana and EVM reviews, governance, and launch controls." />
   <meta name="theme-color" content="#04070a" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://graphtheory.xyz/chainforge/" />
-  <meta property="og:title" content="chainforge | GraphTheory docs" />
-  <meta property="og:description" content="Security-first blockchain architect profile for smart contracts, DeFi, audits, and tokenomics." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ChainForge developer docs" />
+  <meta property="og:description" content="Security-first blockchain architect profile for smart contracts, protocol design, tokenomics, audit readiness, Solana and EVM reviews, governance, and launch controls." />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://graphtheory.xyz/chainforge/" />
   <meta property="og:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="/assets/favicon.png" type="image/png" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "chainforge", "description": "Installable Hermes Agent profile for a security-first blockchain architect specializing in smart contracts, Solidity, Solana, DeFi, audits, governance, and tokenomics.", "codeRepository": "https://github.com/codegraphtheory/chainforge", "url": "https://graphtheory.xyz/chainforge/", "programmingLanguage": "Python"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "ChainForge developer docs", "url": "https://graphtheory.xyz/chainforge/", "about": "Security-first blockchain architect profile for smart contracts, protocol design, tokenomics, audit readiness, Solana and EVM reviews, governance, and launch controls."}</script>
   <style>
     :root {
       --bg: #04070a;
@@ -667,40 +666,63 @@
     .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
     @media (max-width: 820px) { .detail-grid { grid-template-columns: 1fr; } .timeline div { grid-template-columns: 1fr; } }
     @media (max-width: 420px) { .ring { width: 100%; } }
+
+    .doc-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; align-items: start; }
+    .doc-sidebar { position: sticky; top: 92px; border: 1px solid var(--line); background: rgba(4,7,10,.58); padding: 16px; }
+    .doc-sidebar a { display: block; padding: 9px 0; color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: lowercase; border-bottom: 1px solid rgba(160,166,207,.11); }
+    .doc-sidebar a:hover { color: var(--hot); }
+    .doc-main { display: grid; gap: 34px; min-width: 0; }
+    .doc-section { border: 1px solid var(--line); background: var(--panel); padding: clamp(18px, 3vw, 30px); }
+    .doc-section h2 { margin-top: 0; font-family: var(--mono); font-size: clamp(30px, 4vw, 48px); line-height: .9; letter-spacing: -.065em; text-transform: lowercase; }
+    .doc-section h3 { margin: 22px 0 10px; color: var(--hot-2); font-family: var(--mono); font-size: 16px; letter-spacing: .04em; text-transform: lowercase; }
+    .doc-section p, .doc-section li { color: var(--muted); line-height: 1.64; }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .spec { border: 1px solid rgba(160,166,207,.18); background: rgba(0,0,0,.18); padding: 14px; min-width: 0; }
+    .spec code { display: block; margin-bottom: 8px; color: var(--hot); font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: lowercase; }
+    .spec span { color: var(--muted); line-height: 1.52; }
+    .command-list { display: grid; gap: 12px; }
+    .command-list pre { margin: 0; overflow-x: auto; border: 1px solid rgba(160,166,207,.18); background: rgba(0,0,0,.32); padding: 14px; }
+    .command-list code { white-space: pre; color: var(--hot-2); font-family: var(--mono); font-size: 12px; line-height: 1.55; }
+    .file-map { display: grid; gap: 8px; }
+    .file-map div { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 14px; border-bottom: 1px solid rgba(160,166,207,.12); padding: 10px 0; }
+    .file-map code { color: var(--hot); font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; }
+    .file-map span { color: var(--muted); line-height: 1.48; }
+    .callout { border-left: 3px solid var(--hot); background: rgba(9,239,226,.06); padding: 14px 16px; color: var(--hot-2); }
+    @media (max-width: 920px) { .doc-layout { grid-template-columns: 1fr; } .doc-sidebar { position: static; } .spec-grid { grid-template-columns: 1fr; } .file-map div { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="shell nav-inner">
       <a class="brand" href="/"><span class="sigil" aria-hidden="true"></span><span>graphtheory</span></a>
-      <div class="nav-links"><a class="cmd" href="/">home</a><a class="cmd" href="/#work">work</a><a class="cmd" href="/#project-docs">docs</a><a class="cmd hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a></div>
+      <div class="nav-links"><a class="cmd" href="/">home</a><a class="cmd" href="#quickstart">quickstart</a><a class="cmd" href="#repo-map">repo map</a><a class="cmd hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a></div>
     </div>
   </nav>
   <main>
     <header class="shell hero">
       <div>
-        <div class="micro"><span class="pulse"></span><span>original GraphTheory repo | Python | 7 stars</span></div>
+        <div class="micro"><span class="pulse"></span><span>original GraphTheory developer docs | Python</span></div>
         <h1><span class="glitch-title">chainforge</span></h1>
-        <p class="hero-copy">Security-first blockchain architect profile for smart contracts, DeFi, audits, and tokenomics.</p>
-        <div class="hero-actions"><a class="cmd hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">open repo</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge/issues" target="_blank" rel="noopener">issues</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge/stargazers" target="_blank" rel="noopener">star</a></div>
+        <p class="hero-copy">Security-first blockchain architect profile for smart contracts, protocol design, tokenomics, audit readiness, Solana and EVM reviews, governance, and launch controls.</p>
+        <div class="hero-actions"><a class="cmd hot" href="#quickstart">start</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">source</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge/issues" target="_blank" rel="noopener">issues</a></div>
       </div>
       <div class="panel big">
-        <div class="proof-list"><div><code>repo</code><span>codegraphtheory/chainforge</span></div><div><code>branch</code><span>main</span></div><div><code>docs</code><span>https://graphtheory.xyz/chainforge/</span></div><div><code>forks</code><span>2</span></div></div>
-        <div class="tags"><span class="tag">ai-agent</span><span class="tag">blockchain</span><span class="tag">defi</span><span class="tag">developer-tools</span><span class="tag">ethereum</span><span class="tag">security</span><span class="tag">smart-contracts</span><span class="tag">solana</span></div>
+        <div class="proof-list"><div><code>repo</code><span>codegraphtheory/chainforge</span></div><div><code>docs</code><span>https://graphtheory.xyz/chainforge/</span></div><div><code>status</code><span>original GraphTheory work</span></div><div><code>audience</code><span>developers and maintainers</span></div></div>
       </div>
     </header>
-
-    <section class="shell" aria-labelledby="why-title">
-      <div class="section-head"><h2 id="why-title">why this exists</h2><p class="section-copy">The useful part, not a generated placeholder.</p></div>
-      <div class="detail-grid"><article class="detail-card"><h3>who it is for</h3><p>Protocol builders who need threat models, audit-ready Solidity or Solana guidance, governance plans, and economically sane token mechanisms.</p></article><article class="detail-card"><h3>problem</h3><p>Blockchain code is adversarial by default. ChainForge starts from threat models, access control, oracle risk, governance capture, and incentive compatibility before writing code.</p></article><article class="detail-card"><h3>positioning</h3><p>Original GraphTheory work with source, docs, repository metadata, and a direct path back to GitHub for issues and contributions.</p></article></div>
+    <section class="shell doc-layout" aria-label="Developer documentation">
+      <aside class="doc-sidebar"><a href="#overview">overview</a><a href="#quickstart">quickstart</a><a href="#workflows">workflows</a><a href="#repo-map">repo map</a><a href="#validation">validation</a><a href="#configuration">configuration</a><a href="#troubleshooting">troubleshooting</a><a href="#contribute">contribute</a></aside>
+      <div class="doc-main">
+        <section class="doc-section" id="overview"><h2>overview</h2><p>Security-first blockchain architect profile for smart contracts, protocol design, tokenomics, audit readiness, Solana and EVM reviews, governance, and launch controls.</p><div class="spec-grid"><div class="spec"><code>threat model first</code><span>Define assets, adversaries, trust boundaries, governance powers, oracle assumptions, and economic incentives.</span></div><div class="spec"><code>contract review</code><span>Review Solidity, Foundry, Hardhat, OpenZeppelin, Solady, Solana Anchor, Move, or CosmWasm context when supplied.</span></div><div class="spec"><code>tokenomics review</code><span>Check emissions, vesting, governance capture, liquidity risks, sustainability, and asymmetric extraction.</span></div><div class="spec"><code>audit readiness</code><span>Produce test, fuzz, invariant, deployment, verification, monitoring, and incident-response checklists.</span></div></div></section>
+        <section class="doc-section" id="quickstart"><h2>quickstart</h2><p>Use these commands first. They are intentionally copyable and match the public repository workflow.</p><h3>install or run</h3><div class="command-list"><pre><code>hermes profile install github.com/codegraphtheory/chainforge --alias</code></pre><pre><code>chainforge chat</code></pre></div><h3>local developer setup</h3><div class="command-list"><pre><code>git clone https://github.com/codegraphtheory/chainforge.git</code></pre><pre><code>cd chainforge</code></pre><pre><code>python3 scripts/validate_profile.py .</code></pre><pre><code>hermes profile install . --name chainforge-local --yes</code></pre><pre><code>hermes -p chainforge-local chat</code></pre></div></section>
+        <section class="doc-section" id="workflows"><h2>developer workflows</h2><p>The project is useful when the workflow is explicit. These are the paths to test before treating the project as production-ready.</p><div class="spec-grid"><div class="spec"><code>threat model first</code><span>Define assets, adversaries, trust boundaries, governance powers, oracle assumptions, and economic incentives.</span></div><div class="spec"><code>contract review</code><span>Review Solidity, Foundry, Hardhat, OpenZeppelin, Solady, Solana Anchor, Move, or CosmWasm context when supplied.</span></div><div class="spec"><code>tokenomics review</code><span>Check emissions, vesting, governance capture, liquidity risks, sustainability, and asymmetric extraction.</span></div><div class="spec"><code>audit readiness</code><span>Produce test, fuzz, invariant, deployment, verification, monitoring, and incident-response checklists.</span></div></div></section>
+        <section class="doc-section" id="repo-map"><h2>repo map</h2><p>Start with these files when debugging, extending, or reviewing the project.</p><div class="file-map"><div><code>SOUL.md</code><span>Security-first identity, refusal rules, EVM standards, Octra support, and engineering posture.</span></div><div><code>skills/chainforge-blockchain-engineering/SKILL.md</code><span>Reusable blockchain engineering workflow.</span></div><div><code>skills/octra-support/SKILL.md</code><span>Octra wallet and client support procedures.</span></div><div><code>skills/profile-craft/SKILL.md</code><span>Profile generation workflow for related agents.</span></div><div><code>scripts/validate_profile.py</code><span>Distribution validation script.</span></div><div><code>templates/profile.params.yaml</code><span>Params for generating related profile distributions.</span></div></div></section>
+        <section class="doc-section" id="validation"><h2>validation</h2><p>Do not trust the docs. Run the checks and inspect the output.</p><div class="command-list"><pre><code>python3 scripts/validate_profile.py .</code></pre><pre><code>hermes profile install . --name chainforge-local --yes --force</code></pre><pre><code>hermes -p chainforge-local chat -q &quot;Reply OK if ChainForge is installed.&quot;</code></pre></div></section>
+        <section class="doc-section" id="configuration"><h2>configuration</h2><p>Configuration surface and credential expectations.</p><div class="spec-grid"><div class="spec"><code>OPENROUTER_API_KEY</code><span>Optional model provider key.</span></div><div class="spec"><code>GITHUB_TOKEN</code><span>Optional for GitHub-heavy smart contract repositories. Prefer gh auth.</span></div></div><p class="callout">Never commit .env files, OAuth tokens, API keys, cookies, private documents, or Hermes runtime state.</p></section>
+        <section class="doc-section" id="troubleshooting"><h2>troubleshooting</h2><p>Common failure modes and where to look first.</p><div class="spec-grid"><div class="spec"><code>review lacks repo context</code><span>Provide contract paths, deployment target, compiler version, test framework, and protocol threat model.</span></div><div class="spec"><code>tokenomics request is unsafe</code><span>ChainForge refuses rug-pull mechanics, hidden controls, fake audit claims, and deceptive launches.</span></div><div class="spec"><code>Octra details are stale</code><span>Verify official Octra repos and project files before relying on network-specific assumptions.</span></div></div></section>
+        <section class="doc-section" id="contribute"><h2>contribute</h2><p>Open a focused issue or pull request with commands run, expected behavior, actual behavior, and relevant logs. Keep changes scoped. For GraphTheory public repos, maintainer commits use the GraphTheory identity and avoid private personal data.</p><div class="hero-actions"><a class="cmd hot" href="https://github.com/codegraphtheory/chainforge/issues/new/choose" target="_blank" rel="noopener">new issue</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge/pulls" target="_blank" rel="noopener">pull requests</a><a class="cmd" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">source</a></div></section>
+      </div>
     </section>
-
-    <section class="shell" aria-labelledby="workflow-title"><div class="section-head"><h2 id="workflow-title">workflow</h2><p class="section-copy">How the project is meant to be used or evaluated.</p></div><div class="timeline"><div><code>01</code><span>Define adversaries, assets, trust boundaries, and upgrade authority.</span></div><div><code>02</code><span>Choose the smallest secure architecture that satisfies the protocol goal.</span></div><div><code>03</code><span>Write or review contract code with explicit security rationale and gas-awareness.</span></div><div><code>04</code><span>Plan tests, fuzzing, invariants, audits, bounties, and launch controls.</span></div></div></section>
-
-    <section class="shell" aria-labelledby="quick-title"><div class="section-head"><h2 id="quick-title">quick start</h2><p class="section-copy">First command path. Check the README for current details before production use.</p></div><div class="code-block"><code>hermes profile install github.com/codegraphtheory/chainforge --name chainforge --alias
-chainforge chat</code></div></section>
-
-    <section class="shell" aria-labelledby="proof-title"><div class="section-head"><h2 id="proof-title">proof surface</h2><p class="section-copy">What makes this more than a link card.</p></div><div class="feed"><div><code>proof</code><span>Refuses obfuscated admin keys, predatory tokenomics, and unaudited mainnet shortcuts.</span></div><div><code>proof</code><span>Emphasizes OpenZeppelin, Solady, Foundry, fuzzing, invariants, and formal methods where feasible.</span></div><div><code>proof</code><span>Built for community-aligned, economically sustainable protocol work.</span></div><div><code>readme</code><span>Solidity, Foundry, Hardhat, OpenZeppelin, Solady, and EVM protocol work.</span></div><div><code>readme</code><span>Smart contract implementation, review, testing, and hardening.</span></div><div><code>readme</code><span>Threat models for contracts, protocols, bridges, governance, oracles, and token systems.</span></div><div><code>readme</code><span>Tokenomics and incentive design.</span></div><div class="feed-row"><code>source</code><span><a href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">https://github.com/codegraphtheory/chainforge</a></span></div><div class="feed-row"><code>topics</code><span>ai-agent, blockchain, defi, developer-tools, ethereum, security, smart-contracts, solana, solidity, web3</span></div></div></section>
   </main>
   <footer><div class="shell footer-inner"><span>graph 🏴‍☠️ | open source ai advocate building on Hermes</span><span><a href="https://x.com/graphtheory" target="_blank" rel="noopener">x.com/graphtheory</a> | <a href="https://github.com/codegraphtheory" target="_blank" rel="noopener">github.com/codegraphtheory</a></span></div></footer>
 </body>

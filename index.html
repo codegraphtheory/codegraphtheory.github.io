@@ -690,6 +690,29 @@
     .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
     @media (max-width: 820px) { .detail-grid { grid-template-columns: 1fr; } .timeline div { grid-template-columns: 1fr; } }
     @media (max-width: 420px) { .ring { width: 100%; } }
+
+    .doc-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; align-items: start; }
+    .doc-sidebar { position: sticky; top: 92px; border: 1px solid var(--line); background: rgba(4,7,10,.58); padding: 16px; }
+    .doc-sidebar a { display: block; padding: 9px 0; color: var(--muted); font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: lowercase; border-bottom: 1px solid rgba(160,166,207,.11); }
+    .doc-sidebar a:hover { color: var(--hot); }
+    .doc-main { display: grid; gap: 34px; min-width: 0; }
+    .doc-section { border: 1px solid var(--line); background: var(--panel); padding: clamp(18px, 3vw, 30px); }
+    .doc-section h2 { margin-top: 0; font-family: var(--mono); font-size: clamp(30px, 4vw, 48px); line-height: .9; letter-spacing: -.065em; text-transform: lowercase; }
+    .doc-section h3 { margin: 22px 0 10px; color: var(--hot-2); font-family: var(--mono); font-size: 16px; letter-spacing: .04em; text-transform: lowercase; }
+    .doc-section p, .doc-section li { color: var(--muted); line-height: 1.64; }
+    .spec-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .spec { border: 1px solid rgba(160,166,207,.18); background: rgba(0,0,0,.18); padding: 14px; min-width: 0; }
+    .spec code { display: block; margin-bottom: 8px; color: var(--hot); font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: lowercase; }
+    .spec span { color: var(--muted); line-height: 1.52; }
+    .command-list { display: grid; gap: 12px; }
+    .command-list pre { margin: 0; overflow-x: auto; border: 1px solid rgba(160,166,207,.18); background: rgba(0,0,0,.32); padding: 14px; }
+    .command-list code { white-space: pre; color: var(--hot-2); font-family: var(--mono); font-size: 12px; line-height: 1.55; }
+    .file-map { display: grid; gap: 8px; }
+    .file-map div { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 14px; border-bottom: 1px solid rgba(160,166,207,.12); padding: 10px 0; }
+    .file-map code { color: var(--hot); font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; }
+    .file-map span { color: var(--muted); line-height: 1.48; }
+    .callout { border-left: 3px solid var(--hot); background: rgba(9,239,226,.06); padding: 14px 16px; color: var(--hot-2); }
+    @media (max-width: 920px) { .doc-layout { grid-template-columns: 1fr; } .doc-sidebar { position: static; } .spec-grid { grid-template-columns: 1fr; } .file-map div { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -872,15 +895,15 @@
     <section class="shell" id="project-docs" aria-labelledby="project-docs-title">
       <div class="section-head">
         <h2 id="project-docs-title">project docs</h2>
-        <p class="section-copy">Only original GraphTheory project repositories get docs pages here. Forks stay on GitHub where upstream context belongs, and the Pages repository is this root site.</p>
+        <p class="section-copy">Original GraphTheory project docs with developer setup, repository maps, validation commands, configuration notes, troubleshooting, and contribution paths. Forks stay on GitHub where upstream context belongs.</p>
       </div>
       <div class="feed">
-        <div class="feed-row"><code>hermes-profile-template</code><span><a href="/hermes-profile-template">graphtheory.xyz/hermes-profile-template/</a> | <a href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a> | Prompt-to-repo authoring system for installable Hermes Agent profile distributions.</span></div>
-        <div class="feed-row"><code>heavy-coder</code><span><a href="/heavy-coder">graphtheory.xyz/heavy-coder/</a> | <a href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a> | Adaptive multi-agent coding-team profile for GitHub issue-to-PR automation.</span></div>
-        <div class="feed-row"><code>context-forge-rag</code><span><a href="/context-forge-rag">graphtheory.xyz/context-forge-rag/</a> | <a href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">github</a> | Production RAG architecture profile for retrieval systems that need release discipline.</span></div>
-        <div class="feed-row"><code>chainforge</code><span><a href="/chainforge">graphtheory.xyz/chainforge/</a> | <a href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a> | Security-first blockchain architect profile for smart contracts, DeFi, audits, and tokenomics.</span></div>
-        <div class="feed-row"><code>solana-rug</code><span><a href="/solana-rug">graphtheory.xyz/solana-rug/</a> | <a href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">github</a> | Solana trust and safety analysis for token risk scoring and rug-pull detection.</span></div>
-        <div class="feed-row"><code>codegraphtheory</code><span><a href="/codegraphtheory">graphtheory.xyz/codegraphtheory/</a> | <a href="https://github.com/codegraphtheory/codegraphtheory" target="_blank" rel="noopener">github</a> | GraphTheory GitHub profile and portfolio surface for original agent infrastructure work.</span></div>
+        <div class="feed-row"><code>hermes-profile-template</code><span><a href="/hermes-profile-template">graphtheory.xyz/hermes-profile-template/</a> | <a href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a> | Prompt-to-repo authoring system with install, generator, validator, release, web-demo, and template-map docs.</span></div>
+        <div class="feed-row"><code>heavy-coder</code><span><a href="/heavy-coder">graphtheory.xyz/heavy-coder/</a> | <a href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a> | Multi-agent coding-team profile with hook, skill, schema, policy, test, and issue-to-PR workflow docs.</span></div>
+        <div class="feed-row"><code>context-forge-rag</code><span><a href="/context-forge-rag">graphtheory.xyz/context-forge-rag/</a> | <a href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">github</a> | Production RAG architecture profile with ADR, eval, observability, issue-factory, and generated-profile docs.</span></div>
+        <div class="feed-row"><code>chainforge</code><span><a href="/chainforge">graphtheory.xyz/chainforge/</a> | <a href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a> | Security-first blockchain architect profile with threat-model, review, tokenomics, Octra, and validation docs.</span></div>
+        <div class="feed-row"><code>solana-rug</code><span><a href="/solana-rug">graphtheory.xyz/solana-rug/</a> | <a href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">github</a> | Solana token and wallet risk CLI with scoring, RPC, watch mode, Hermes skill, and release-check docs.</span></div>
+        <div class="feed-row"><code>codegraphtheory</code><span><a href="/codegraphtheory">graphtheory.xyz/codegraphtheory/</a> | <a href="https://github.com/codegraphtheory/codegraphtheory" target="_blank" rel="noopener">github</a> | Profile README developer surface with curation, identity-safety, and project routing docs.</span></div>
       </div>
     </section>
 
