@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>hermes-profile-template | GraphTheory docs</title>
-  <meta name="description" content="Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions." />
+  <meta name="description" content="Prompt-to-repo authoring system for installable Hermes Agent profile distributions." />
   <meta name="theme-color" content="#04070a" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://graphtheory.xyz/hermes-profile-template/" />
   <meta property="og:title" content="hermes-profile-template | GraphTheory docs" />
-  <meta property="og:description" content="Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions." />
+  <meta property="og:description" content="Prompt-to-repo authoring system for installable Hermes Agent profile distributions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://graphtheory.xyz/hermes-profile-template/" />
   <meta property="og:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="/assets/favicon.png" type="image/png" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "hermes-profile-template", "description": "Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions.", "codeRepository": "https://github.com/codegraphtheory/hermes-profile-template", "url": "https://graphtheory.xyz/hermes-profile-template/", "programmingLanguage": "Mixed"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "hermes-profile-template", "description": "Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions.", "codeRepository": "https://github.com/codegraphtheory/hermes-profile-template", "url": "https://graphtheory.xyz/hermes-profile-template/", "programmingLanguage": "Python"}</script>
   <style>
     :root {
       --bg: #04070a;
@@ -654,52 +654,53 @@
 
     .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
     @media (max-width: 420px) { .ring { width: 100%; } }
-  </style>
+
+    .detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .detail-card { border: 1px solid var(--line); background: var(--panel); padding: 18px; min-height: 146px; }
+    .detail-card h3 { margin: 0 0 10px; font-family: var(--mono); font-size: 14px; letter-spacing: .04em; text-transform: lowercase; color: var(--hot-2); }
+    .detail-card p { margin: 0; color: var(--muted); line-height: 1.58; font-size: 14px; }
+    .code-block { overflow-x: auto; border: 1px solid var(--line); background: rgba(0,0,0,.28); padding: 18px; }
+    .code-block code { white-space: pre; font-family: var(--mono); font-size: 13px; color: var(--hot-2); }
+    .timeline { display: grid; gap: 10px; }
+    .timeline div { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 16px; padding: 14px; border: 1px solid var(--line); background: rgba(240,239,250,.032); }
+    .timeline code { color: var(--hot); font-family: var(--mono); font-size: 11px; text-transform: lowercase; }
+    .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+    @media (max-width: 820px) { .detail-grid { grid-template-columns: 1fr; } .timeline div { grid-template-columns: 1fr; } }
+    @media (max-width: 420px) { .ring { width: 100%; } }
+</style>
 </head>
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="shell nav-inner">
       <a class="brand" href="/"><span class="sigil" aria-hidden="true"></span><span>graphtheory</span></a>
-      <div class="nav-links">
-        <a class="cmd" href="/">home</a>
-        <a class="cmd" href="/#work">work</a>
-        <a class="cmd hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a>
-      </div>
+      <div class="nav-links"><a class="cmd" href="/">home</a><a class="cmd" href="/#work">work</a><a class="cmd" href="/#project-docs">docs</a><a class="cmd hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a></div>
     </div>
   </nav>
   <main>
     <header class="shell hero">
       <div>
-        <div class="micro"><span class="pulse"></span><span>original repo | 23 stars | 27 forks</span></div>
+        <div class="micro"><span class="pulse"></span><span>original GraphTheory repo | Python | 23 stars</span></div>
         <h1><span class="glitch-title">hermes-profile-template</span></h1>
-        <p class="hero-copy">Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions.</p>
-        <div class="hero-actions">
-          <a class="cmd hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open repo</a>
-          <a class="cmd" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a>
-          <a class="cmd" href="/">graphtheory</a>
-        </div>
+        <p class="hero-copy">Prompt-to-repo authoring system for installable Hermes Agent profile distributions.</p>
+        <div class="hero-actions"><a class="cmd hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open repo</a><a class="cmd" href="https://github.com/codegraphtheory/hermes-profile-template/issues" target="_blank" rel="noopener">issues</a><a class="cmd" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a></div>
       </div>
       <div class="panel big">
-        <div class="proof-list">
-          <div><code>repo</code><span>codegraphtheory/hermes-profile-template</span></div>
-          <div><code>branch</code><span>main</span></div>
-          <div><code>docs</code><span>https://graphtheory.xyz/hermes-profile-template/</span></div>
-        </div>
-        <div class="tags"><span class="tag">agent-skills</span><span class="tag">ai-agents</span><span class="tag">developer-tools</span><span class="tag">hermes-agent</span><span class="tag">profile-template</span><span class="tag">agent-profile</span></div>
+        <div class="proof-list"><div><code>repo</code><span>codegraphtheory/hermes-profile-template</span></div><div><code>branch</code><span>main</span></div><div><code>docs</code><span>https://graphtheory.xyz/hermes-profile-template/</span></div><div><code>forks</code><span>27</span></div></div>
+        <div class="tags"><span class="tag">agent-skills</span><span class="tag">ai-agents</span><span class="tag">developer-tools</span><span class="tag">hermes-agent</span><span class="tag">profile-template</span><span class="tag">agent-profile</span><span class="tag">automation</span><span class="tag">cli</span></div>
       </div>
     </header>
-    <section class="shell" aria-labelledby="overview-title">
-      <div class="section-head"><h2 id="overview-title">overview</h2><p class="section-copy">A public GraphTheory docs landing page for this repository.</p></div>
-      <div class="feed">
-        <div class="feed-row"><code>purpose</code><span>Prompt-to-repo authoring system with one-sentence generation, demo assets, diagrams, and installable Hermes Agent profile distributions.</span></div>
-        <div class="feed-row"><code>source</code><span><a href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">https://github.com/codegraphtheory/hermes-profile-template</a></span></div>
-        <div class="feed-row"><code>topics</code><span>agent-skills, ai-agents, developer-tools, hermes-agent, profile-template, agent-profile, automation, cli</span></div>
-      </div>
+
+    <section class="shell" aria-labelledby="why-title">
+      <div class="section-head"><h2 id="why-title">why this exists</h2><p class="section-copy">The useful part, not a generated placeholder.</p></div>
+      <div class="detail-grid"><article class="detail-card"><h3>who it is for</h3><p>Builders who want a specialist AI profile repo that can be installed, validated, released, and customized without starting from a blank prompt.</p></article><article class="detail-card"><h3>problem</h3><p>It turns profile creation into an auditable software artifact. The repo ships manifests, SOUL.md, skills, examples, release checks, and CI instead of a disposable chat transcript.</p></article><article class="detail-card"><h3>positioning</h3><p>Original GraphTheory work with source, docs, repository metadata, and a direct path back to GitHub for issues and contributions.</p></article></div>
     </section>
-    <section class="shell" aria-labelledby="install-title">
-      <div class="section-head"><h2 id="install-title">install</h2><p class="section-copy">If this repository is an installable Hermes profile distribution, this is the expected install path.</p></div>
-      <div class="panel big"><pre><code>hermes profile install github.com/codegraphtheory/hermes-profile-template --alias</code></pre></div>
-    </section>
+
+    <section class="shell" aria-labelledby="workflow-title"><div class="section-head"><h2 id="workflow-title">workflow</h2><p class="section-copy">How the project is meant to be used or evaluated.</p></div><div class="timeline"><div><code>01</code><span>Start from one sentence or a structured params file.</span></div><div><code>02</code><span>Generate a complete profile distribution with deterministic scripts.</span></div><div><code>03</code><span>Validate manifests, skills, examples, runtime ownership, and install paths.</span></div><div><code>04</code><span>Publish with README copy, catalog snippets, release readiness, and smoke tests.</span></div></div></section>
+
+    <section class="shell" aria-labelledby="quick-title"><div class="section-head"><h2 id="quick-title">quick start</h2><p class="section-copy">First command path. Check the README for current details before production use.</p></div><div class="code-block"><code>hermes profile install github.com/codegraphtheory/hermes-profile-template --name profile-architect --alias
+profile-architect chat</code></div></section>
+
+    <section class="shell" aria-labelledby="proof-title"><div class="section-head"><h2 id="proof-title">proof surface</h2><p class="section-copy">What makes this more than a link card.</p></div><div class="feed"><div><code>proof</code><span>Profile validator checks required distribution files and frontmatter.</span></div><div><code>proof</code><span>Generator smoke tests keep starter profiles reproducible.</span></div><div><code>proof</code><span>Release readiness guard catches version, changelog, secret, and install-command drift.</span></div><div><code>readme</code><span>Reviews SQL migration diffs before deploy.</span></div><div><code>readme</code><span>Flags destructive operations like dropped columns, table rewrites, missing rollback plans, unsafe locks, and irreversible data changes.</span></div><div><code>readme</code><span>Produces a short risk summary and a rollback checklist.</span></div><div><code>readme</code><span>Write the generated profile under /tmp/hermes-profile-builder-demo/database-migration-reviewer.</span></div><div class="feed-row"><code>source</code><span><a href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">https://github.com/codegraphtheory/hermes-profile-template</a></span></div><div class="feed-row"><code>topics</code><span>agent-skills, ai-agents, developer-tools, hermes-agent, profile-template, agent-profile, automation, cli, profile-distribution, python</span></div></div></section>
   </main>
   <footer><div class="shell footer-inner"><span>graph 🏴‍☠️ | open source ai advocate building on Hermes</span><span><a href="https://x.com/graphtheory" target="_blank" rel="noopener">x.com/graphtheory</a> | <a href="https://github.com/codegraphtheory" target="_blank" rel="noopener">github.com/codegraphtheory</a></span></div></footer>
 </body>

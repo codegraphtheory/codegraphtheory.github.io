@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>heavy-coder | GraphTheory docs</title>
-  <meta name="description" content="Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy." />
+  <meta name="description" content="Adaptive multi-agent coding-team profile for GitHub issue-to-PR automation." />
   <meta name="theme-color" content="#04070a" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://graphtheory.xyz/heavy-coder/" />
   <meta property="og:title" content="heavy-coder | GraphTheory docs" />
-  <meta property="og:description" content="Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy." />
+  <meta property="og:description" content="Adaptive multi-agent coding-team profile for GitHub issue-to-PR automation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://graphtheory.xyz/heavy-coder/" />
   <meta property="og:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://graphtheory.xyz/assets/og-card-v3.png" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="/assets/favicon.png" type="image/png" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "heavy-coder", "description": "Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.", "codeRepository": "https://github.com/codegraphtheory/heavy-coder", "url": "https://graphtheory.xyz/heavy-coder/", "programmingLanguage": "Mixed"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareSourceCode", "name": "heavy-coder", "description": "Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.", "codeRepository": "https://github.com/codegraphtheory/heavy-coder", "url": "https://graphtheory.xyz/heavy-coder/", "programmingLanguage": "Python"}</script>
   <style>
     :root {
       --bg: #04070a;
@@ -654,52 +654,53 @@
 
     .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
     @media (max-width: 420px) { .ring { width: 100%; } }
-  </style>
+
+    .detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .detail-card { border: 1px solid var(--line); background: var(--panel); padding: 18px; min-height: 146px; }
+    .detail-card h3 { margin: 0 0 10px; font-family: var(--mono); font-size: 14px; letter-spacing: .04em; text-transform: lowercase; color: var(--hot-2); }
+    .detail-card p { margin: 0; color: var(--muted); line-height: 1.58; font-size: 14px; }
+    .code-block { overflow-x: auto; border: 1px solid var(--line); background: rgba(0,0,0,.28); padding: 18px; }
+    .code-block code { white-space: pre; font-family: var(--mono); font-size: 13px; color: var(--hot-2); }
+    .timeline { display: grid; gap: 10px; }
+    .timeline div { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 16px; padding: 14px; border: 1px solid var(--line); background: rgba(240,239,250,.032); }
+    .timeline code { color: var(--hot); font-family: var(--mono); font-size: 11px; text-transform: lowercase; }
+    .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+    @media (max-width: 820px) { .detail-grid { grid-template-columns: 1fr; } .timeline div { grid-template-columns: 1fr; } }
+    @media (max-width: 420px) { .ring { width: 100%; } }
+</style>
 </head>
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="shell nav-inner">
       <a class="brand" href="/"><span class="sigil" aria-hidden="true"></span><span>graphtheory</span></a>
-      <div class="nav-links">
-        <a class="cmd" href="/">home</a>
-        <a class="cmd" href="/#work">work</a>
-        <a class="cmd hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a>
-      </div>
+      <div class="nav-links"><a class="cmd" href="/">home</a><a class="cmd" href="/#work">work</a><a class="cmd" href="/#project-docs">docs</a><a class="cmd hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a></div>
     </div>
   </nav>
   <main>
     <header class="shell hero">
       <div>
-        <div class="micro"><span class="pulse"></span><span>original repo | 0 stars | 0 forks</span></div>
+        <div class="micro"><span class="pulse"></span><span>original GraphTheory repo | Python | 0 stars</span></div>
         <h1><span class="glitch-title">heavy-coder</span></h1>
-        <p class="hero-copy">Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.</p>
-        <div class="hero-actions">
-          <a class="cmd hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">open repo</a>
-          <a class="cmd" href="https://github.com/codegraphtheory/heavy-coder/stargazers" target="_blank" rel="noopener">star</a>
-          <a class="cmd" href="/">graphtheory</a>
-        </div>
+        <p class="hero-copy">Adaptive multi-agent coding-team profile for GitHub issue-to-PR automation.</p>
+        <div class="hero-actions"><a class="cmd hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">open repo</a><a class="cmd" href="https://github.com/codegraphtheory/heavy-coder/issues" target="_blank" rel="noopener">issues</a><a class="cmd" href="https://github.com/codegraphtheory/heavy-coder/stargazers" target="_blank" rel="noopener">star</a></div>
       </div>
       <div class="panel big">
-        <div class="proof-list">
-          <div><code>repo</code><span>codegraphtheory/heavy-coder</span></div>
-          <div><code>branch</code><span>main</span></div>
-          <div><code>docs</code><span>https://graphtheory.xyz/heavy-coder/</span></div>
-        </div>
-        <div class="tags"><span class="tag">ai-agents</span><span class="tag">coding-agent</span><span class="tag">developer-tools</span><span class="tag">hermes-agent</span><span class="tag">python</span><span class="tag">multi-agent</span></div>
+        <div class="proof-list"><div><code>repo</code><span>codegraphtheory/heavy-coder</span></div><div><code>branch</code><span>main</span></div><div><code>docs</code><span>https://graphtheory.xyz/heavy-coder/</span></div><div><code>forks</code><span>0</span></div></div>
+        <div class="tags"><span class="tag">ai-agents</span><span class="tag">coding-agent</span><span class="tag">developer-tools</span><span class="tag">hermes-agent</span><span class="tag">python</span><span class="tag">multi-agent</span><span class="tag">agentic-coding</span><span class="tag">automation</span></div>
       </div>
     </header>
-    <section class="shell" aria-labelledby="overview-title">
-      <div class="section-head"><h2 id="overview-title">overview</h2><p class="section-copy">A public GraphTheory docs landing page for this repository.</p></div>
-      <div class="feed">
-        <div class="feed-row"><code>purpose</code><span>Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.</span></div>
-        <div class="feed-row"><code>source</code><span><a href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">https://github.com/codegraphtheory/heavy-coder</a></span></div>
-        <div class="feed-row"><code>topics</code><span>ai-agents, coding-agent, developer-tools, hermes-agent, python, multi-agent, agentic-coding, automation</span></div>
-      </div>
+
+    <section class="shell" aria-labelledby="why-title">
+      <div class="section-head"><h2 id="why-title">why this exists</h2><p class="section-copy">The useful part, not a generated placeholder.</p></div>
+      <div class="detail-grid"><article class="detail-card"><h3>who it is for</h3><p>Maintainers who want issue triage, implementation, blind critique, synthesis, CI evidence, and careful merge gates handled as one disciplined coding workflow.</p></article><article class="detail-card"><h3>problem</h3><p>Single-agent coding is brittle when nobody reviews the work. Heavy Coder encodes a team shape: builder, critic, synthesizer, and release guard, with a fail-closed unattended merge policy.</p></article><article class="detail-card"><h3>positioning</h3><p>Original GraphTheory work with source, docs, repository metadata, and a direct path back to GitHub for issues and contributions.</p></article></div>
     </section>
-    <section class="shell" aria-labelledby="install-title">
-      <div class="section-head"><h2 id="install-title">install</h2><p class="section-copy">If this repository is an installable Hermes profile distribution, this is the expected install path.</p></div>
-      <div class="panel big"><pre><code>hermes profile install github.com/codegraphtheory/heavy-coder --alias</code></pre></div>
-    </section>
+
+    <section class="shell" aria-labelledby="workflow-title"><div class="section-head"><h2 id="workflow-title">workflow</h2><p class="section-copy">How the project is meant to be used or evaluated.</p></div><div class="timeline"><div><code>01</code><span>Select or receive a GitHub issue with enough acceptance criteria.</span></div><div><code>02</code><span>Decompose the change into implementation, review, and verification workstreams.</span></div><div><code>03</code><span>Run blind critique against the proposed patch before synthesis.</span></div><div><code>04</code><span>Require CI schemas and explicit evidence before an unattended merge can proceed.</span></div></div></section>
+
+    <section class="shell" aria-labelledby="quick-title"><div class="section-head"><h2 id="quick-title">quick start</h2><p class="section-copy">First command path. Check the README for current details before production use.</p></div><div class="code-block"><code>hermes profile install github.com/codegraphtheory/heavy-coder --name heavy-coder --alias
+heavy-coder chat</code></div></section>
+
+    <section class="shell" aria-labelledby="proof-title"><div class="section-head"><h2 id="proof-title">proof surface</h2><p class="section-copy">What makes this more than a link card.</p></div><div class="feed"><div><code>proof</code><span>Designed around GitHub issue-to-PR flow, not generic code generation.</span></div><div><code>proof</code><span>Uses structured critique and synthesis instead of trusting first-pass output.</span></div><div><code>proof</code><span>Treats CI, branch state, and merge safety as part of the agent contract.</span></div><div><code>readme</code><span>Implement this feature using an adaptive team of independent candidates.</span></div><div><code>readme</code><span>Investigate this failing test and propose a fix. (hooks still steer non-trivial coding toward team mode.)</span></div><div><code>readme</code><span>Future: Implement issue #123, run tests, and open a pull request. Stop before merge.</span></div><div><code>readme</code><span>Width 8 (default) - fast, high-quality council: parallel diversity without 5-minute fan-out (heavycoder.councilwidth).</span></div><div class="feed-row"><code>source</code><span><a href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">https://github.com/codegraphtheory/heavy-coder</a></span></div><div class="feed-row"><code>topics</code><span>ai-agents, coding-agent, developer-tools, hermes-agent, python, multi-agent, agentic-coding, automation, ci-cd, code-review</span></div></div></section>
   </main>
   <footer><div class="shell footer-inner"><span>graph 🏴‍☠️ | open source ai advocate building on Hermes</span><span><a href="https://x.com/graphtheory" target="_blank" rel="noopener">x.com/graphtheory</a> | <a href="https://github.com/codegraphtheory" target="_blank" rel="noopener">github.com/codegraphtheory</a></span></div></footer>
 </body>
