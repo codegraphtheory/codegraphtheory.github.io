@@ -1,5 +1,8 @@
 # GraphTheory landing page
 
+
+<p><strong>Docs:</strong> <a href="https://graphtheory.xyz/codegraphtheory.github.io/">https://graphtheory.xyz/codegraphtheory.github.io/</a></p>
+
 Static cyberpunk landing page for GraphTheory.
 
 ## Preview
