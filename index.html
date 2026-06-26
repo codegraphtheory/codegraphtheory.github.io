@@ -674,6 +674,9 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
+
+    .feed-row code, .feed-row span, .feed-row a { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+    @media (max-width: 420px) { .ring { width: 100%; } }
   </style>
 </head>
 <body>
@@ -739,7 +742,7 @@
           <div class="proof-list">
             <div><code>7248</code><span>posts</span></div>
             <div><code>2124</code><span>X followers</span></div>
-            <div><code>18</code><span>public repos</span></div>
+            <div><code>21</code><span>public repos</span></div>
             <div><code>35</code><span>GitHub followers</span></div>
           </div>
         </div>
@@ -816,7 +819,15 @@
           <h3>hermes-profile-template</h3>
           <p>Prompt to repo authoring system. One sentence becomes a mature agent prompt, then an installable Hermes profile distribution with SOUL.md, validation, CI, docs, and release structure.</p>
           <div class="tags"><span class="tag">hermes-agent</span><span class="tag">profile-template</span><span class="tag">validation</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/hermes-profile-template/">docs</a></div>
+        </article>
+
+        <article class="repo">
+          <div class="repo-top"><span>original | hermes</span><span class="stars">0★ 0 forks</span></div>
+          <h3>heavy-coder</h3>
+          <p>Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.</p>
+          <div class="tags"><span class="tag">hermes-agent</span><span class="tag">multi-agent</span><span class="tag">coding</span></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">open</a><a class="cmd mini" href="/heavy-coder/">docs</a><a class="cmd mini" href="https://github.com/codegraphtheory/heavy-coder/stargazers" target="_blank" rel="noopener">star</a></div>
         </article>
 
         <article class="repo">
@@ -824,7 +835,7 @@
           <h3>context-forge-rag</h3>
           <p>Installable principal-level RAG architecture profile for retrieval design, agent workflows, evaluation, observability, release gates, and implementation-ready plans.</p>
           <div class="tags"><span class="tag">rag</span><span class="tag">evals</span><span class="tag">observability</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/context-forge-rag/stargazers" target="_blank" rel="noopener">star</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/context-forge-rag/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/context-forge-rag/">docs</a></div>
         </article>
 
         <article class="repo">
@@ -832,7 +843,7 @@
           <h3>chainforge</h3>
           <p>Security-first blockchain architect profile for smart contracts, threat models, protocol design, tokenomics, audit readiness, and production-grade Web3 engineering.</p>
           <div class="tags"><span class="tag">security</span><span class="tag">solidity</span><span class="tag">tokenomics</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/chainforge/stargazers" target="_blank" rel="noopener">star</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/chainforge/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/chainforge/">docs</a></div>
         </article>
 
         <article class="repo">
@@ -840,8 +851,39 @@
           <h3>solana-rug</h3>
           <p>Open-source Solana trust and safety analysis for token risk scoring, rug-pull detection, on-chain checks, Pump.fun reviews, and Hermes workflows.</p>
           <div class="tags"><span class="tag">solana</span><span class="tag">risk-analysis</span><span class="tag">anti-rug</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/solana-rug/stargazers" target="_blank" rel="noopener">star</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/solana-rug/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/solana-rug/">docs</a></div>
         </article>
+      </div>
+    </section>
+
+
+    <section class="shell" id="project-docs" aria-labelledby="project-docs-title">
+      <div class="section-head">
+        <h2 id="project-docs-title">project docs</h2>
+        <p class="section-copy">Every public GraphTheory repository has a matching docs landing page in this visual system.</p>
+      </div>
+      <div class="feed">
+        <div class="feed-row"><code>hermes-profile-template</code><span><a href="/hermes-profile-template/">graphtheory.xyz/hermes-profile-template/</a> | <a href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>heavy-coder</code><span><a href="/heavy-coder/">graphtheory.xyz/heavy-coder/</a> | <a href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>context-forge-rag</code><span><a href="/context-forge-rag/">graphtheory.xyz/context-forge-rag/</a> | <a href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>chainforge</code><span><a href="/chainforge/">graphtheory.xyz/chainforge/</a> | <a href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>solana-rug</code><span><a href="/solana-rug/">graphtheory.xyz/solana-rug/</a> | <a href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>codegraphtheory</code><span><a href="/codegraphtheory/">graphtheory.xyz/codegraphtheory/</a> | <a href="https://github.com/codegraphtheory/codegraphtheory" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>codegraphtheory.github.io</code><span><a href="/codegraphtheory.github.io/">graphtheory.xyz/codegraphtheory.github.io/</a> | <a href="https://github.com/codegraphtheory/codegraphtheory.github.io" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>agent-profiles</code><span><a href="/agent-profiles/">graphtheory.xyz/agent-profiles/</a> | <a href="https://github.com/codegraphtheory/agent-profiles" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-blockchain</code><span><a href="/awesome-blockchain/">graphtheory.xyz/awesome-blockchain/</a> | <a href="https://github.com/codegraphtheory/awesome-blockchain" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-hermes-agent</code><span><a href="/awesome-hermes-agent/">graphtheory.xyz/awesome-hermes-agent/</a> | <a href="https://github.com/codegraphtheory/awesome-hermes-agent" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-openclaw-agents</code><span><a href="/awesome-openclaw-agents/">graphtheory.xyz/awesome-openclaw-agents/</a> | <a href="https://github.com/codegraphtheory/awesome-openclaw-agents" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-rag-resources</code><span><a href="/awesome-rag-resources/">graphtheory.xyz/awesome-rag-resources/</a> | <a href="https://github.com/codegraphtheory/awesome-rag-resources" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-solana</code><span><a href="/awesome-solana/">graphtheory.xyz/awesome-solana/</a> | <a href="https://github.com/codegraphtheory/awesome-solana" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-solana-ai</code><span><a href="/awesome-solana-ai/">graphtheory.xyz/awesome-solana-ai/</a> | <a href="https://github.com/codegraphtheory/awesome-solana-ai" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>awesome-solana-oss</code><span><a href="/awesome-solana-oss/">graphtheory.xyz/awesome-solana-oss/</a> | <a href="https://github.com/codegraphtheory/awesome-solana-oss" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>hermes-agent</code><span><a href="/hermes-agent/">graphtheory.xyz/hermes-agent/</a> | <a href="https://github.com/codegraphtheory/hermes-agent" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>hermes-profile-kit</code><span><a href="/hermes-profile-kit/">graphtheory.xyz/hermes-profile-kit/</a> | <a href="https://github.com/codegraphtheory/hermes-profile-kit" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>hermes-profiles</code><span><a href="/hermes-profiles/">graphtheory.xyz/hermes-profiles/</a> | <a href="https://github.com/codegraphtheory/hermes-profiles" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>octra</code><span><a href="/octra/">graphtheory.xyz/octra/</a> | <a href="https://github.com/codegraphtheory/octra" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>soul.md</code><span><a href="/soul.md/">graphtheory.xyz/soul.md/</a> | <a href="https://github.com/codegraphtheory/soul.md" target="_blank" rel="noopener">github</a></span></div>
+        <div class="feed-row"><code>Supra-AI</code><span><a href="/Supra-AI/">graphtheory.xyz/Supra-AI/</a> | <a href="https://github.com/codegraphtheory/Supra-AI" target="_blank" rel="noopener">github</a></span></div>
       </div>
     </section>
 
