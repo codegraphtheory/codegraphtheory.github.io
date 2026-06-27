@@ -617,6 +617,37 @@
     .stars { color: var(--hot); white-space: nowrap; }
     .repo h3 { margin: 0; font-family: var(--mono); font-size: 25px; line-height: 1; letter-spacing: -.045em; text-transform: lowercase; }
     .repo p { margin: 14px 0 22px; color: var(--muted); line-height: 1.56; font-size: 15px; }
+    .repo-demo {
+      margin: 0 -22px 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(0, 0, 0, .42);
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+    .repo-demo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .repo-demo figcaption {
+      padding: 8px 12px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: lowercase;
+      color: var(--soft);
+      border-top: 1px solid rgba(160, 166, 207, .14);
+    }
+    .repo.has-demo { min-height: 0; padding-top: 0; }
+    .repo.has-demo .repo-top { margin: 22px 22px 0; padding-top: 0; }
+    .repo.has-demo h3,
+    .repo.has-demo p,
+    .repo.has-demo .tags,
+    .repo.has-demo .repo-actions { margin-left: 22px; margin-right: 22px; }
+    .repo.has-demo .repo-demo { margin: 0 0 16px; border-left: 0; border-right: 0; }
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
     .tag { border: 1px solid rgba(160,166,207,.22); color: var(--hot-2); padding: 7px 8px; font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: lowercase; background: rgba(4,7,10,.42); }
     .repo-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
@@ -721,6 +752,7 @@
       <a class="brand" href="#top" aria-label="graph home"><span class="sigil" aria-hidden="true"></span><span>graph</span></a>
       <div class="nav-links">
         <a class="cmd" href="#work">work</a>
+        <a class="cmd" href="#demos">demos</a>
         <a class="cmd" href="#voice">voice</a>
         <a class="cmd" href="#highlights">highlights</a>
         <a class="cmd" href="#pfp-process">pfp</a>
@@ -855,7 +887,7 @@
           <h3>hermes-profile-template</h3>
           <p>Prompt to repo authoring system. One sentence becomes a mature agent prompt, then an installable Hermes profile distribution with SOUL.md, validation, CI, docs, and release structure.</p>
           <div class="tags"><span class="tag">hermes-agent</span><span class="tag">profile-template</span><span class="tag">validation</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/hermes-profile-template/">docs</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">open</a><a class="cmd mini" href="#demos">demo</a><a class="cmd mini" href="https://github.com/codegraphtheory/hermes-profile-template/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/hermes-profile-template/">docs</a></div>
         </article>
 
         <article class="repo">
@@ -863,7 +895,7 @@
           <h3>heavy-coder</h3>
           <p>Hermes Agent profile for adaptive multi-agent coding teams with GitHub issue-to-PR automation, blind critique, synthesis, CI schemas, and fail-closed unattended merge policy.</p>
           <div class="tags"><span class="tag">hermes-agent</span><span class="tag">multi-agent</span><span class="tag">coding</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">open</a><a class="cmd mini" href="/heavy-coder/">docs</a><a class="cmd mini" href="https://github.com/codegraphtheory/heavy-coder/stargazers" target="_blank" rel="noopener">star</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">open</a><a class="cmd mini" href="#demos">demo</a><a class="cmd mini" href="/heavy-coder/">docs</a><a class="cmd mini" href="https://github.com/codegraphtheory/heavy-coder/stargazers" target="_blank" rel="noopener">star</a></div>
         </article>
 
         <article class="repo">
@@ -871,7 +903,7 @@
           <h3>context-forge-rag</h3>
           <p>Installable principal-level RAG architecture profile for retrieval design, agent workflows, evaluation, observability, release gates, and implementation-ready plans.</p>
           <div class="tags"><span class="tag">rag</span><span class="tag">evals</span><span class="tag">observability</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/context-forge-rag/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/context-forge-rag/">docs</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">open</a><a class="cmd mini" href="#demos">demo</a><a class="cmd mini" href="https://github.com/codegraphtheory/context-forge-rag/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/context-forge-rag/">docs</a></div>
         </article>
 
         <article class="repo">
@@ -879,7 +911,7 @@
           <h3>chainforge</h3>
           <p>Security-first blockchain architect profile for smart contracts, threat models, protocol design, tokenomics, audit readiness, and production-grade Web3 engineering.</p>
           <div class="tags"><span class="tag">security</span><span class="tag">solidity</span><span class="tag">tokenomics</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/chainforge/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/chainforge/">docs</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">open</a><a class="cmd mini" href="#demos">demo</a><a class="cmd mini" href="https://github.com/codegraphtheory/chainforge/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/chainforge/">docs</a></div>
         </article>
 
         <article class="repo">
@@ -887,7 +919,70 @@
           <h3>solana-rug</h3>
           <p>Open-source Solana trust and safety analysis for token risk scoring, rug-pull detection, on-chain checks, Pump.fun reviews, and Hermes workflows.</p>
           <div class="tags"><span class="tag">solana</span><span class="tag">risk-analysis</span><span class="tag">anti-rug</span></div>
-          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">open</a><a class="cmd mini" href="https://github.com/codegraphtheory/solana-rug/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/solana-rug/">docs</a></div>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">open</a><a class="cmd mini" href="#demos">demo</a><a class="cmd mini" href="https://github.com/codegraphtheory/solana-rug/stargazers" target="_blank" rel="noopener">star</a><a class="cmd mini" href="/solana-rug/">docs</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell" id="demos" aria-labelledby="demos-title">
+      <div class="section-head">
+        <h2 id="demos-title">demos</h2>
+        <p class="section-copy">30-second terminal demos (VHS). No editing: install, validate, CLI, and primary workflows per project.</p>
+      </div>
+      <div class="repo-grid">
+        <article class="repo has-demo">
+          <figure class="repo-demo">
+            <img src="/assets/demos/hermes-profile-template.gif" alt="Hermes Profile Template demo: validation, scorecard, and install" width="1280" height="720" loading="lazy" decoding="async" />
+            <figcaption>prompt to repo</figcaption>
+          </figure>
+          <div class="repo-top"><span>vhs · 30s</span><span class="stars">terminal</span></div>
+          <h3>hermes-profile-template</h3>
+          <p>Validation, profile scorecard, distribution manifest, and Hermes install in one take.</p>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/hermes-profile-template" target="_blank" rel="noopener">github</a><a class="cmd mini" href="/hermes-profile-template/">docs</a></div>
+        </article>
+
+        <article class="repo has-demo">
+          <figure class="repo-demo">
+            <img src="/assets/demos/heavy-coder.gif" alt="Heavy Coder demo: council plan and swarm dashboard" width="1280" height="720" loading="lazy" decoding="async" />
+            <figcaption>council + swarm</figcaption>
+          </figure>
+          <div class="repo-top"><span>vhs · 30s</span><span class="stars">terminal</span></div>
+          <h3>heavy-coder</h3>
+          <p>Council plan JSON, staged swarm_watch progress, and ship-gate pytest.</p>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/heavy-coder" target="_blank" rel="noopener">github</a><a class="cmd mini" href="/heavy-coder/">docs</a></div>
+        </article>
+
+        <article class="repo has-demo">
+          <figure class="repo-demo">
+            <img src="/assets/demos/context-forge-rag.gif" alt="ContextForge RAG demo: profile validation and skills" width="1280" height="720" loading="lazy" decoding="async" />
+            <figcaption>rag profile</figcaption>
+          </figure>
+          <div class="repo-top"><span>vhs · 30s</span><span class="stars">terminal</span></div>
+          <h3>context-forge-rag</h3>
+          <p>Profile validation, SOUL excerpt, skills list, and install command.</p>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/context-forge-rag" target="_blank" rel="noopener">github</a><a class="cmd mini" href="/context-forge-rag/">docs</a></div>
+        </article>
+
+        <article class="repo has-demo">
+          <figure class="repo-demo">
+            <img src="/assets/demos/chainforge.gif" alt="ChainForge demo: blockchain security profile" width="1280" height="720" loading="lazy" decoding="async" />
+            <figcaption>chain security</figcaption>
+          </figure>
+          <div class="repo-top"><span>vhs · 30s</span><span class="stars">terminal</span></div>
+          <h3>chainforge</h3>
+          <p>validate_profile, SOUL, skills, and Hermes install for Web3 work.</p>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/chainforge" target="_blank" rel="noopener">github</a><a class="cmd mini" href="/chainforge/">docs</a></div>
+        </article>
+
+        <article class="repo has-demo">
+          <figure class="repo-demo">
+            <img src="/assets/demos/solana-rug.gif" alt="Solana Rug Guard demo: token safety score" width="1280" height="720" loading="lazy" decoding="async" />
+            <figcaption>on-chain score</figcaption>
+          </figure>
+          <div class="repo-top"><span>vhs · 30s</span><span class="stars">terminal</span></div>
+          <h3>solana-rug</h3>
+          <p>CLI help, live BONK token markdown report, and JSON safety breakdown.</p>
+          <div class="repo-actions"><a class="cmd mini hot" href="https://github.com/codegraphtheory/solana-rug" target="_blank" rel="noopener">github</a><a class="cmd mini" href="/solana-rug/">docs</a></div>
         </article>
       </div>
     </section>
@@ -945,6 +1040,7 @@
       <div class="feed">
         <div class="feed-row"><code>profiles</code><span>Hermes Profile Template, Heavy Coder, ContextForge RAG, and ChainForge are original installable profile distributions or authoring systems.</span></div>
         <div class="feed-row"><code>security</code><span>Solana Rug Guard and ChainForge cover trust-and-safety, protocol review, threat modeling, and adversarial engineering.</span></div>
+        <div class="feed-row"><code>demos</code><span>Each original project ships a 30s VHS terminal GIF on GitHub; this site mirrors them under <strong>/assets/demos/</strong> in the <a href="#demos">demos</a> section.</span></div>
         <div class="feed-row"><code>site</code><span>This landing system is static, versioned, and deployed through GitHub Pages from the GraphTheory root site repository.</span></div>
         <div class="feed-row"><code>rule</code><span>Project docs on this domain are reserved for original GraphTheory work.</span></div>
       </div>
