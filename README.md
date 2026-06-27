@@ -18,7 +18,7 @@ open http://127.0.0.1:4173/
 ## Files
 
 - `index.html`: landing page with embedded CSS and no build step.
-- `assets/graphtheory-profile.webp`: optimized hero image derived from `/Users/grey/Downloads/IMG_6295.jpg`.
+- `assets/graphtheory-profile.webp`: optimized hero image (local source file not committed).
 - `assets/demos/*.gif`: 30s VHS terminal demos synced from project repos (`scripts/sync_demo_gifs.sh`).
 - `assets/og-image.png`: 1200x630 share card.
 - `assets/favicon.svg`, `assets/favicon.png`, `assets/apple-touch-icon.png`, `assets/site.webmanifest`: identity assets.

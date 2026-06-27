@@ -14,6 +14,8 @@ Type "ls assets" Enter
 Sleep 3s
 
 Hide
+Type "source demos/vhs/sanitize-recording-env.sh" Enter
+Sleep 300ms
 Type "python3 -m http.server 4173 >/tmp/gt-demo-http.log 2>&1 &" Enter
 Sleep 1s
 Type "curl -s http://127.0.0.1:4173/ | head -20" Enter
