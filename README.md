@@ -1,5 +1,8 @@
 # GraphTheory landing page
 
+<p align="center">
+  <img src="demos/demo.gif" alt="30-second demo: local preview and static assets" width="100%">
+</p>
 
 <p><strong>Docs:</strong> <a href="https://graphtheory.xyz/">https://graphtheory.xyz/</a></p>
 
