@@ -4,10 +4,16 @@
   "description": "Static cyberpunk landing page for GraphTheory.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "python3 scripts/validate_static_site.py",
+    "verify:responsive": "node scripts/verify-responsive.mjs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "hermes-agent",
+    "ai-agents",
+    "developer-tools",
+    "agent-profiles"
+  ],
+  "author": "GraphTheory",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
